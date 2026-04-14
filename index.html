@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>শুভ নববর্ষ - Pohela Boishakh Card Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for background confetti -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <div class="app-container">
+    <header class="header">
+      <h1 class="main-title">শুভ নববর্ষ</h1>
+      <p class="subtitle">Personalize your Pohela Boishakh greeting card</p>
+    </header>
+
+    <main class="main-content">
+      <div class="controls-panel card">
+        <div class="control-group">
+          <label for="imageUpload" class="custom-file-upload btn-primary">
+            Upload Your Photo (or Drag & Drop)
+          </label>
+          <input type="file" id="imageUpload" accept="image/*" />
+        </div>
+
+        <div class="control-group" id="zoomControl" style="display: none;">
+          <label for="imageZoom">Adjust Image Size</label>
+          <input type="range" id="imageZoom" min="0.1" max="4" step="0.01" value="1" />
+        </div>
+
+        <div class="control-group action-group">
+          <button id="downloadBtn" class="btn-secondary btn-download" disabled>Download Finished Image</button>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+          💡 Tip: You can drag your photo to adjust positioning and use the slider to resize.
+        </p>
+      </div>
+
+      <div class="preview-panel card">
+        <div class="canvas-wrapper">
+          <canvas id="cardCanvas" width="800" height="800"></canvas>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Hidden elements for drawing -->
+    <img id="frameImage" style="display: none;">
+  </div>
+
+  <script src="frame_base64.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
