@@ -85,24 +85,6 @@ novoborsho/
 ├── frame_base64.js   # Base64-encoded frame (enables canvas export)
 └── screenshot.png    # App preview screenshot
 ```
-
----
-
-## 🌐 Deployment
-
-### Netlify (Live)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://novoborsho-softvence.netlify.app)
-
-Already deployed at: **https://novoborsho-softvence.netlify.app**
-
-To redeploy after changes:
-```bash
-netlify deploy --dir=. --prod
-```
-
-### GitHub Pages (Alternative)
-Enable GitHub Pages in repo **Settings → Pages → Branch: main → / (root)**.
-
 ---
 
 ## 🤝 Credits
